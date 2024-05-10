@@ -1,0 +1,45 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set page_title = "Books Page" %}
+{% set active_page = "books" %}
+
+{% block content %}
+
+    <h1>Books</h1>
+
+    <p class="lead">Take a look at all the books</p>
+
+    {% if books|length > 0 %}
+
+        <!--div class="container"-->
+        <div class="row">
+            {% for book in books %}
+                <div class="col">
+                    <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                        <img class="card-img-top" src="{{ book.img }}" alt="an image of '{{ book.title }}'">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">{{ book.author }}</p>
+                            <p class="card-text">${{ book.price}}</p>
+
+                            <!-- CREATE ORDER -->
+                            <form method="POST" action="/user/orders/create" style="display: inline;">
+                                <input type="hidden" name="product_id" value="{{ book.id }}">
+                                <input type="hidden" name="product_name" value="{{ book.title }}">
+                                <input type="hidden" name="product_price" value="{{ book.price }}">
+                                <input type="hidden" name="product_type" value="books">
+                                <button type="submit" class="btn btn-outline-primary">Order now!</button>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!--/div-->
+
+    {% else %}
+
+        <p>Oops, no books found.</p>
+
+    {% endif %}
+
+{% endblock %}

@@ -6,7 +6,7 @@
 
     <h1>Products</h1>
 
-    <p class="lead">This is the products page</p>
+    <p class="lead">Take a look at some leisure & lifestyle products</p>
 
     {% if products|length > 0 %}
 
@@ -19,6 +19,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ product.name }}</h5>
                             <p class="card-text">{{ product.description }}</p>
+                            <p class="card-text">${{ product.price }}</p>
 
                             <!--button class="btn btn-primary">Order now!</button-->
 
@@ -29,6 +30,7 @@
                                 <input type="hidden" name="product_description" value="{{ product.description }}">
                                 <input type="hidden" name="product_price" value="{{ product.price }}">
                                 <input type="hidden" name="product_url" value="{{ product.url }}">
+                                <input type="hidden" name="product_type" value="products">
                                 <button type="submit" class="btn btn-outline-primary">Order now!</button>
                              </form>
 

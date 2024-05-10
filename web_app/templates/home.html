@@ -3,10 +3,67 @@
 
 {% block content %}
 
-    <h1>Home</h1>
+    <h1>Welcome!</h1>
 
-    <p class="lead">This is the home page.</p>
+    <p class="lead">Read & Relax here </p>
 
-    <p>Here is some more info!</p>
+    <p>Or maybe even meet us!</p>
+
+    <!--
+        CAROUSEL CONTENT
+        -->
+
+    
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="/books" target="_blank">
+                    <img src="https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        class="d-block w-100" 
+                        alt="Buy Books :D">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <p>Buy Books :D</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <a href="/products" target="_blank">
+                    <img src="https://images.unsplash.com/photo-1569383971623-393054ce65c8?q=80&w=1810&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        class="d-block w-100" alt="Buy Relaxation Products">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <p>Buy Relaxation Products</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="/about" target="_blank">
+                    <img src="https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="d-block w-100" alt="Know About Us">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <p>Know About Us</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
 {% endblock %}

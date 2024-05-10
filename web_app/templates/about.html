@@ -4,10 +4,43 @@
 
 {% block content %}
 
-    <h1>About</h1>
+    <h1>About Us</h1>
 
-    <p class="lead">This is the about page</p>
+    <!-- <p class="lead">Know More About us</p> -->
 
-    <p>Here is some more info!</p>
+    <div class="container-fluid mt-5">
+        <!-- Developer Bio and Picture -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Know More About us</h2>
+                <p>We are great friends who met at the beginning of our MBA program and have been collaborating to ensure both us pass the program ever since. Sanjana is on the left and Sukriti on the right.Sanjana loves reading, and Sukriti loves being at peace. Thus, books & some relaxation products!</p>
+                <img src="https://res.cloudinary.com/di0vnxjrj/image/upload/v1715327370/Capture_rqicrk.png" 
+                alt="Sanjana & Sukriti" class="img-fluid">
+            </div>
+        </div>
+
+        <!-- Contact Us Form -->
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <h2>Contact Us! Share your feedback or Just say HI &#128513; </h2>
+                <p> We love it already that you decided to write to us &#128523; &#128523; </p>
+                <form method="POST" action="/about/create" style="display: inline;">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

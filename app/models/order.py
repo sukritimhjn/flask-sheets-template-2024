@@ -6,7 +6,7 @@ class Order(BaseModel):
 
     SHEET_NAME = "orders"
 
-    COLUMNS = ["user_email", "product_id", "product_name", "product_price"]
+    COLUMNS = ["user_email", "product_id", "product_type", "product_name", "product_price"]
 
     SEEDS = []
 
